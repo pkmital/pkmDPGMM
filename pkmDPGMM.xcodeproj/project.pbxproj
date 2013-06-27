@@ -1,0 +1,276 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		891D7B191346453D008B6915 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 891D7B181346453D008B6915 /* Accelerate.framework */; };
+		895C7A9E174B075900562E78 /* cluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895C7A99174B075900562E78 /* cluster.cpp */; };
+		895C7A9F174B075900562E78 /* comutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895C7A9A174B075900562E78 /* comutils.cpp */; };
+		895C7AA0174B075900562E78 /* distributions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895C7A9C174B075900562E78 /* distributions.cpp */; };
+		895C7AA1174B075900562E78 /* probutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895C7A9D174B075900562E78 /* probutils.cpp */; };
+		895C7AA3174B0F6900562E78 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895C7AA2174B0F6900562E78 /* main.cpp */; };
+		895C7AA7174B148900562E78 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895C7AA5174B148900562E78 /* util.cpp */; };
+		8DD76F6A0486A84900D96B5E /* pkmMatrix.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* pkmMatrix.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* pkmMatrix.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		891D7B181346453D008B6915 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		895C7A95174B075900562E78 /* distributions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = distributions.h; sourceTree = "<group>"; };
+		895C7A96174B075900562E78 /* libcluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libcluster.h; sourceTree = "<group>"; };
+		895C7A97174B075900562E78 /* probutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = probutils.h; sourceTree = "<group>"; };
+		895C7A99174B075900562E78 /* cluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cluster.cpp; sourceTree = "<group>"; };
+		895C7A9A174B075900562E78 /* comutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = comutils.cpp; sourceTree = "<group>"; };
+		895C7A9B174B075900562E78 /* comutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comutils.h; sourceTree = "<group>"; };
+		895C7A9C174B075900562E78 /* distributions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = distributions.cpp; sourceTree = "<group>"; };
+		895C7A9D174B075900562E78 /* probutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = probutils.cpp; sourceTree = "<group>"; };
+		895C7AA2174B0F6900562E78 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
+		895C7AA5174B148900562E78 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		895C7AA6174B148900562E78 /* util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = util.hpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* pkmDPGMM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pkmDPGMM; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859E8B029090EE04C91782 /* pkmMatrix.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = pkmMatrix.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				891D7B191346453D008B6915 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* pkmMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				895C7A93174B074D00562E78 /* libcluster */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				891D7B181346453D008B6915 /* Accelerate.framework */,
+			);
+			name = pkmMatrix;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				895C7AA5174B148900562E78 /* util.cpp */,
+				895C7AA6174B148900562E78 /* util.hpp */,
+				895C7AA2174B0F6900562E78 /* main.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* pkmDPGMM */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		895C7A93174B074D00562E78 /* libcluster */ = {
+			isa = PBXGroup;
+			children = (
+				895C7A94174B075900562E78 /* include */,
+				895C7A98174B075900562E78 /* src */,
+			);
+			name = libcluster;
+			sourceTree = "<group>";
+		};
+		895C7A94174B075900562E78 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				895C7A95174B075900562E78 /* distributions.h */,
+				895C7A96174B075900562E78 /* libcluster.h */,
+				895C7A97174B075900562E78 /* probutils.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		895C7A98174B075900562E78 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				895C7A99174B075900562E78 /* cluster.cpp */,
+				895C7A9A174B075900562E78 /* comutils.cpp */,
+				895C7A9B174B075900562E78 /* comutils.h */,
+				895C7A9C174B075900562E78 /* distributions.cpp */,
+				895C7A9D174B075900562E78 /* probutils.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* pkmMatrix.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* pkmDPGMM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "pkmDPGMM" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pkmDPGMM;
+			productInstallPath = "$(HOME)/bin";
+			productName = pkmMatrix;
+			productReference = 8DD76F6C0486A84900D96B5E /* pkmDPGMM */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "pkmDPGMM" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* pkmMatrix */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* pkmDPGMM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				895C7A9E174B075900562E78 /* cluster.cpp in Sources */,
+				895C7A9F174B075900562E78 /* comutils.cpp in Sources */,
+				895C7AA0174B075900562E78 /* distributions.cpp in Sources */,
+				895C7AA1174B075900562E78 /* probutils.cpp in Sources */,
+				895C7AA3174B0F6900562E78 /* main.cpp in Sources */,
+				895C7AA7174B148900562E78 /* util.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = pkmDPGMM;
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = pkmDPGMM;
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ENABLE_OPENMP_SUPPORT = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.7;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ENABLE_OPENMP_SUPPORT = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include/;
+				PREBINDING = NO;
+				SDKROOT = macosx10.7;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "pkmDPGMM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "pkmDPGMM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

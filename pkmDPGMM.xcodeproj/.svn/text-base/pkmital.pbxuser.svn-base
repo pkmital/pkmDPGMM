@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 891D7B0C1346446B008B6915 /* pkmMatrix */;
+		activeTarget = 8DD76F620486A84900D96B5E /* pkmMatrix */;
+		addToTargets = (
+			8DD76F620486A84900D96B5E /* pkmMatrix */,
+		);
+		breakpoints = (
+			89182A8813471C66003E4548 /* pkmMatrix.h:318 */,
+			89182A98134721AD003E4548 /* pkmMatrix.cpp:402 */,
+			89182B3B13475A9C003E4548 /* pkmMatrix.cpp:118 */,
+			89182B6913475EF8003E4548 /* pkmMatrix.cpp:113 */,
+			89182B6E13475F12003E4548 /* main.cpp:76 */,
+			8987FDAB134F283800DB7F8A /* main.cpp:76 */,
+			8987FE7E134F4DDE00DB7F8A /* main.cpp:36 */,
+			893777B61354B3A400815214 /* pkmMatrix.cpp:46 */,
+		);
+		codeSenseManager = 891D7B161346447A008B6915 /* Code sense */;
+		executables = (
+			891D7B0C1346446B008B6915 /* pkmMatrix */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					699,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 324340855;
+			PBXWorkspaceStateSaveDate = 324340855;
+		};
+		perUserProjectItems = {
+			893779061354C3DD00815214 /* PBXTextBookmark */ = 893779061354C3DD00815214 /* PBXTextBookmark */;
+			893779F713550FAE00815214 /* PBXTextBookmark */ = 893779F713550FAE00815214 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 891D7B151346447A008B6915 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {877, 1120}}";
+			sepNavSelRange = "{1081, 0}";
+			sepNavVisRange = "{0, 0}";
+		};
+	};
+	89182A8813471C66003E4548 /* pkmMatrix.h:318 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 891D7B121346447A008B6915 /* pkmMatrix.h */;
+		functionName = "getTranspose()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 318;
+		modificationTime = 324340893.095006;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	89182A98134721AD003E4548 /* pkmMatrix.cpp:402 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 891D7B131346447A008B6915 /* pkmMatrix.cpp */;
+		functionName = "Mat::GEMM(Mat rhs)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 402;
+		location = pkmMatrix;
+		modificationTime = 324340893.095818;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	89182B3B13475A9C003E4548 /* pkmMatrix.cpp:118 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 891D7B131346447A008B6915 /* pkmMatrix.cpp */;
+		functionName = "Mat::Mat(const Mat &rhs)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 118;
+		location = pkmMatrix;
+		modificationTime = 324340893.096007;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	89182B6913475EF8003E4548 /* pkmMatrix.cpp:113 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 891D7B131346447A008B6915 /* pkmMatrix.cpp */;
+		functionName = "Mat::Mat(const Mat &rhs)";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 113;
+		location = pkmMatrix;
+		modificationTime = 324340893.096105;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	89182B6E13475F12003E4548 /* main.cpp:76 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 76;
+		location = pkmMatrix;
+		modificationTime = 324340893.096221;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	891D7B0C1346446B008B6915 /* pkmMatrix */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = pkmMatrix;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	891D7B121346447A008B6915 /* pkmMatrix.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1097, 7018}}";
+			sepNavSelRange = "{13230, 0}";
+			sepNavVisRange = "{12133, 1314}";
+		};
+	};
+	891D7B131346447A008B6915 /* pkmMatrix.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {768, 5293}}";
+			sepNavSelRange = "{7032, 0}";
+			sepNavVisRange = "{6751, 1260}";
+		};
+	};
+	891D7B151346447A008B6915 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	891D7B161346447A008B6915 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	893777B61354B3A400815214 /* pkmMatrix.cpp:46 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 891D7B131346447A008B6915 /* pkmMatrix.cpp */;
+		functionName = "Mat::~Mat()";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 46;
+		location = pkmMatrix;
+		modificationTime = 324340893.096672;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	893779061354C3DD00815214 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 38";
+		rLen = 0;
+		rLoc = 1081;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	893779F713550FAE00815214 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		name = "main.cpp: 38";
+		rLen = 0;
+		rLoc = 1081;
+		rType = 0;
+		vrLen = 0;
+		vrLoc = 0;
+	};
+	8987FDAB134F283800DB7F8A /* main.cpp:76 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 76;
+		location = pkmMatrix;
+		modificationTime = 324340893.096414;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	8987FE7E134F4DDE00DB7F8A /* main.cpp:36 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 08FB7796FE84155DC02AAC07 /* main.cpp */;
+		functionName = "main (int argc, char * const argv[])";
+		hitCount = 0;
+		ignoreCount = 0;
+		lineNumber = 36;
+		location = pkmMatrix;
+		modificationTime = 324340893.096546;
+		originalNumberOfMultipleMatches = 1;
+		state = 2;
+	};
+	8DD76F620486A84900D96B5E /* pkmMatrix */ = {
+		activeExec = 0;
+		executables = (
+			891D7B0C1346446B008B6915 /* pkmMatrix */,
+		);
+	};
+}
