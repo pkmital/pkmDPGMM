@@ -45,7 +45,6 @@ int main()
     for (vector<GaussWish>::iterator k=clusters.begin(); k < clusters.end(); ++k)
         cout << k->getmean() << endl;
     
-    
     cout << endl << "Cluster covariances:" << endl;
     for (vector<GaussWish>::iterator k=clusters.begin(); k < clusters.end(); ++k)
         cout << k->getcov() << endl << endl;

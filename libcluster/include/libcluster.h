@@ -23,7 +23,10 @@
 #include <iostream>
 #include <eigen3/Eigen/Dense>
 #include <vector>
-#include <omp.h>
+#ifdef WITH_OMP
+    #include <omp.h>
+    #pragma comment(linker, "-lgomp")
+#endif
 #include "distributions.h"
 
 
@@ -160,8 +163,10 @@ double learnVDP (
     distributions::StickBreak& weights,
     std::vector<distributions::GaussWish>& clusters,
     const double clusterprior = PRIORVAL,
-    const bool verbose = false,
-    const unsigned int nthreads = omp_get_max_threads()
+    const bool verbose = false
+#ifdef WITH_OMP
+    , const unsigned int nthreads = omp_get_max_threads()
+#endif
     );
 
 
@@ -200,8 +205,10 @@ double learnBGMM (
     distributions::Dirichlet& weights,
     std::vector<distributions::GaussWish>& clusters,
     const double clusterprior = PRIORVAL,
-    const bool verbose = false,
-    const unsigned int nthreads = omp_get_max_threads()
+    const bool verbose = false
+#ifdef WITH_OMP
+    , const unsigned int nthreads = omp_get_max_threads()
+#endif
     );
 
 
@@ -241,8 +248,10 @@ double learnDGMM (
     distributions::Dirichlet& weights,
     std::vector<distributions::NormGamma>& clusters,
     const double clusterprior = PRIORVAL,
-    const bool verbose = false,
-    const unsigned int nthreads = omp_get_max_threads()
+    const bool verbose = false
+#ifdef WITH_OMP
+    , const unsigned int nthreads = omp_get_max_threads()
+#endif
     );
 
 
@@ -282,8 +291,10 @@ double learnBEMM (
     distributions::Dirichlet& weights,
     std::vector<distributions::ExpGamma>& clusters,
     const double clusterprior = PRIORVAL,
-    const bool verbose = false,
-    const unsigned int nthreads = omp_get_max_threads()
+    const bool verbose = false
+#ifdef WITH_OMP
+    , const unsigned int nthreads = omp_get_max_threads()
+#endif
     );
 
 
@@ -331,8 +342,10 @@ double learnGMC (
     std::vector<distributions::GaussWish>& clusters,
     const double clusterprior = PRIORVAL,
     const bool sparse = false,
-    const bool verbose = false,
-    const unsigned int nthreads = omp_get_max_threads()
+    const bool verbose = false
+#ifdef WITH_OMP
+    , const unsigned int nthreads = omp_get_max_threads()
+#endif
     );
 
 
@@ -381,8 +394,10 @@ double learnSGMC (
     std::vector<distributions::GaussWish>& clusters,
     const double clusterprior = PRIORVAL,
     const bool sparse = false,
-    const bool verbose = false,
-    const unsigned int nthreads = omp_get_max_threads()
+    const bool verbose = false
+#ifdef WITH_OMP
+    , const unsigned int nthreads = omp_get_max_threads()
+#endif
     );
 
 
@@ -432,8 +447,10 @@ double learnDGMC (
     std::vector<distributions::NormGamma>& clusters,
     const double clusterprior = PRIORVAL,
     const bool sparse = false,
-    const bool verbose = false,
-    const unsigned int nthreads = omp_get_max_threads()
+    const bool verbose = false
+#ifdef WITH_OMP
+    , const unsigned int nthreads = omp_get_max_threads()
+#endif
     );
 
 
@@ -481,8 +498,10 @@ double learnEGMC (
     std::vector<distributions::ExpGamma>& clusters,
     const double clusterprior = PRIORVAL,
     const bool sparse = false,
-    const bool verbose = false,
-    const unsigned int nthreads = omp_get_max_threads()
+    const bool verbose = false            
+#ifdef WITH_OMP
+    , const unsigned int nthreads = omp_get_max_threads()
+#endif
     );
 
 }

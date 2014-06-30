@@ -72,7 +72,9 @@ template <class C> ArrayXd updateSS (
   // Sufficient statistics - with observations
   for (unsigned int k = 0; k < nKful; ++k)
   {
+#ifdef WITH_OMP
     #pragma omp critical
+#endif
     clusters[Kful(k)].addobs(qZj.col(Kful(k)), Xj);
   }
 
@@ -202,7 +204,9 @@ template <class W, class C> double vbem (
       clusters[k].clearobs();
 
     // Update Suff Stats and VBM for weights
+#ifdef WITH_OMP
     #pragma omp parallel for schedule(guided)
+#endif
     for (int j = 0; j < J; ++j)
     {
       ArrayXd Njk = updateSS<C>(X[j], qZ[j], clusters, sparse);
@@ -210,13 +214,17 @@ template <class W, class C> double vbem (
     }
 
     // VBM for clusters
+#ifdef WITH_OMP
     #pragma omp parallel for schedule(guided)
+#endif
     for (int k = 0; k < K; ++k)
       clusters[k].update();
 
     // VBE
     double Fz = 0;
+#ifdef WITH_OMP
     #pragma omp parallel for schedule(guided) reduction(+ : Fz)
+#endif
     for (int j = 0; j < J; ++j)
       Fz += vbexpectation<W,C>(X[j], weights[j], clusters, qZ[j], sparse);
 
@@ -279,7 +287,9 @@ template <class W, class C> bool split_ex (
     // Now split observations and qZ.
     int scount = 0, Mtot = 0;
 
+#ifdef WITH_OMP
     #pragma omp parallel for schedule(guided) reduction(+ : Mtot, scount)
+#endif
     for (unsigned int j = 0; j < J; ++j)
     {
       // Make COPY of the observations with only relevant data points, p > 0.5
@@ -309,7 +319,9 @@ template <class W, class C> bool split_ex (
       continue;
 
     // Map the refined splits back to original whole-data problem
+#ifdef WITH_OMP
     #pragma omp parallel for schedule(guided)
+#endif
     for (unsigned int j = 0; j < J; ++j)
       qZaug[j] = augmentqZ(k, mapidx[j], (qZref[j].col(1).array()>0.5), qZ[j]);
 
@@ -376,7 +388,9 @@ template <class W, class C> bool split_gr (
   vector<GreedOrder> ord(K);
 
   // Get cluster parameters and their free energy
+#ifdef WITH_OMP
   #pragma omp parallel for schedule(guided)
+#endif
   for (unsigned int k = 0; k < K; ++k)
   {
     ord[k].k     = k;
@@ -385,7 +399,9 @@ template <class W, class C> bool split_gr (
   }
 
   // Get cluster likelihoods
+#ifdef WITH_OMP
   #pragma omp parallel for schedule(guided)
+#endif
   for (unsigned int j = 0; j < J; ++j)
   {
     // Get cluster weights
@@ -396,8 +412,9 @@ template <class W, class C> bool split_gr (
     {
       double LL = qZ[j].col(k).dot((logpi(k)
                                 + clusters[k].Eloglike(X[j]).array()).matrix());
-
+#ifdef WITH_OMP
       #pragma omp atomic
+#endif
       ord[k].Fk -= LL;
     }
   }
@@ -423,7 +440,9 @@ template <class W, class C> bool split_gr (
     // Now split observations and qZ.
     int scount = 0, Mtot = 0;
 
+#ifdef WITH_OMP
     #pragma omp parallel for schedule(guided) reduction(+ : Mtot, scount)
+#endif
     for (unsigned int j = 0; j < J; ++j)
     {
       // Make COPY of the observations with only relevant data points, p > 0.5
@@ -453,7 +472,9 @@ template <class W, class C> bool split_gr (
       continue;
 
     // Map the refined splits back to original whole-data problem
+#ifdef WITH_OMP
     #pragma omp parallel for schedule(guided)
+#endif
     for (unsigned int j = 0; j < J; ++j)
       qZaug[j] = auglabels(k, mapidx[j], (qZref[j].col(1).array()>0.5), qZ[j]);
 
@@ -556,13 +577,18 @@ template <class W, class C> double cluster (
     vector<C>& clusters,          // Cluster Distributions
     const double clusterprior,    // Prior value for cluster distributions
     const bool sparse,            // Do sparse updates to groups
-    const bool verbose,           // Verbose output
-    const unsigned int nthreads   // Number of threads for OpenMP to use
+    const bool verbose           // Verbose output
+#ifdef WITH_OMP
+                                            , const unsigned int nthreads
+#endif
     )
 {
+#ifdef WITH_OMP
   if (nthreads < 1)
     throw invalid_argument("Must specify at least one thread for execution!");
+
   omp_set_num_threads(nthreads);
+#endif
 
   const unsigned int J = X.size();
 
@@ -626,8 +652,10 @@ double libcluster::learnVDP (
     StickBreak& weights,
     vector<GaussWish>& clusters,
     const double clusterprior,
-    const bool verbose,
-    const unsigned int nthreads
+    const bool verbose
+#ifdef WITH_OMP
+    , const unsigned int nthreads
+#endif
     )
 {
   if (verbose == true)
@@ -640,7 +668,11 @@ double libcluster::learnVDP (
 
   // Perform model learning and selection
   double F = cluster<StickBreak, GaussWish>(vecX, vecqZ, vecweights, clusters,
-                                        clusterprior, false, verbose, nthreads);
+                                        clusterprior, false, verbose
+#ifdef WITH_OMP
+                                            , nthreads
+#endif
+                                            );
 
   // Return final Free energy and qZ
   qZ = vecqZ[0];                        // copies :-(
@@ -655,8 +687,12 @@ double libcluster::learnBGMM (
     Dirichlet& weights,
     vector<GaussWish>& clusters,
     const double clusterprior,
-    const bool verbose,
-    const unsigned int nthreads
+    const bool verbose
+
+#ifdef WITH_OMP
+    , const unsigned int nthreads
+#endif
+
     )
 {
   if (verbose == true)
@@ -669,7 +705,11 @@ double libcluster::learnBGMM (
 
   // Perform model learning and selection
   double F = cluster<Dirichlet, GaussWish>(vecX, vecqZ, vecweights, clusters,
-                                        clusterprior, false, verbose, nthreads);
+                                        clusterprior, false, verbose
+#ifdef WITH_OMP
+                                           , nthreads
+#endif
+                                           );
 
   // Return final Free energy and qZ
   qZ = vecqZ[0];                          // copies :-(
@@ -684,8 +724,10 @@ double libcluster::learnDGMM (
     Dirichlet& weights,
     vector<NormGamma>& clusters,
     const double clusterprior,
-    const bool verbose,
-    const unsigned int nthreads
+    const bool verbose
+#ifdef WITH_OMP
+                              , const unsigned int nthreads
+#endif
     )
 {
   if (verbose == true)
@@ -698,7 +740,11 @@ double libcluster::learnDGMM (
 
   // Perform model learning and selection
   double F = cluster<Dirichlet, NormGamma>(vecX, vecqZ, vecweights, clusters,
-                                        clusterprior, false, verbose, nthreads);
+                                        clusterprior, false, verbose
+#ifdef WITH_OMP
+                                           , nthreads
+#endif
+                                           );
 
   // Return final Free energy and qZ
   qZ = vecqZ[0];                          // copies :-(
@@ -713,8 +759,10 @@ double libcluster::learnBEMM (
     Dirichlet& weights,
     vector<ExpGamma>& clusters,
     const double clusterprior,
-    const bool verbose,
-    const unsigned int nthreads
+    const bool verbose
+#ifdef WITH_OMP
+                              , const unsigned int nthreads
+#endif
     )
 {
   if ((X.array() < 0).any() == true)
@@ -730,7 +778,11 @@ double libcluster::learnBEMM (
 
   // Perform model learning and selection
   double F = cluster<Dirichlet, ExpGamma>(vecX, vecqZ, vecweights, clusters,
-                                        clusterprior, false, verbose, nthreads);
+                                        clusterprior, false, verbose
+#ifdef WITH_OMP
+                                          , nthreads
+#endif
+                                          );
 
   // Return final Free energy and qZ
   qZ = vecqZ[0];                          // copies :-(
@@ -746,8 +798,10 @@ double libcluster::learnGMC (
     vector<GaussWish>& clusters,
     const double clusterprior,
     const bool sparse,
-    const bool verbose,
-    const unsigned int nthreads
+    const bool verbose
+#ifdef WITH_OMP
+                             , const unsigned int nthreads
+#endif
     )
 {
   string spnote = (sparse == true) ? "(sparse) " : "";
@@ -757,7 +811,11 @@ double libcluster::learnGMC (
     cout << "Learning " << spnote << "GMC..." << endl;
 
   return cluster<GDirichlet, GaussWish>(X, qZ, weights, clusters, clusterprior,
-                                        sparse, verbose, nthreads);
+                                        sparse, verbose
+#ifdef WITH_OMP
+                                        , nthreads
+#endif
+                                        );
 }
 
 
@@ -768,8 +826,10 @@ double libcluster::learnSGMC (
     vector<GaussWish>& clusters,
     const double clusterprior,
     const bool sparse,
-    const bool verbose,
-    const unsigned int nthreads
+    const bool verbose
+#ifdef WITH_OMP
+                              , const unsigned int nthreads
+#endif
     )
 {
   string spnote = (sparse == true) ? "(sparse) " : "";
@@ -779,7 +839,11 @@ double libcluster::learnSGMC (
     cout << "Learning " << spnote << "Symmetric GMC..." << endl;
 
   return cluster<Dirichlet, GaussWish>(X, qZ, weights, clusters, clusterprior,
-                                       sparse, verbose, nthreads);
+                                       sparse, verbose
+#ifdef WITH_OMP
+                                       , nthreads
+#endif
+                                       );
 }
 
 
@@ -790,8 +854,10 @@ double libcluster::learnDGMC (
     vector<NormGamma>& clusters,
     const double clusterprior,
     const bool sparse,
-    const bool verbose,
-    const unsigned int nthreads
+    const bool verbose
+#ifdef WITH_OMP
+                              , const unsigned int nthreads
+#endif
     )
 {
   string spnote = (sparse == true) ? "(sparse) " : "";
@@ -801,7 +867,11 @@ double libcluster::learnDGMC (
     cout << "Learning " << spnote << "Diagonal GMC..." << endl;
 
   return cluster<GDirichlet, NormGamma>(X, qZ, weights, clusters, clusterprior,
-                                        sparse, verbose, nthreads);
+                                        sparse, verbose
+#ifdef WITH_OMP
+                                        , nthreads
+#endif
+                                        );
 }
 
 
@@ -812,8 +882,10 @@ double libcluster::learnEGMC (
     vector<ExpGamma>& clusters,
     const double clusterprior,
     const bool sparse,
-    const bool verbose,
-    const unsigned int nthreads
+    const bool verbose
+#ifdef WITH_OMP
+                              , const unsigned int nthreads
+#endif
     )
 {
   string spnote = (sparse == true) ? "(sparse) " : "";
@@ -828,5 +900,9 @@ double libcluster::learnEGMC (
     cout << "Learning " << spnote << "Exponential GMC..." << endl;
 
   return cluster<GDirichlet, ExpGamma>(X, qZ, weights, clusters, clusterprior,
-                                       sparse, verbose, nthreads);
+                                       sparse, verbose
+#ifdef WITH_OMP
+                                       , nthreads
+#endif
+                                       );
 }
