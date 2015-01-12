@@ -7,30 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		890EF11D1793312A00C8F929 /* distributions.h in Headers */ = {isa = PBXBuildFile; fileRef = 890EF10F1793312A00C8F929 /* distributions.h */; };
-		890EF11E1793312A00C8F929 /* libcluster.h in Headers */ = {isa = PBXBuildFile; fileRef = 890EF1101793312A00C8F929 /* libcluster.h */; };
-		890EF11F1793312A00C8F929 /* probutils.h in Headers */ = {isa = PBXBuildFile; fileRef = 890EF1111793312A00C8F929 /* probutils.h */; };
-		890EF1201793312A00C8F929 /* cluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 890EF1131793312A00C8F929 /* cluster.cpp */; };
-		890EF1211793312A00C8F929 /* comutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 890EF1141793312A00C8F929 /* comutils.cpp */; };
-		890EF1221793312A00C8F929 /* comutils.h in Headers */ = {isa = PBXBuildFile; fileRef = 890EF1151793312A00C8F929 /* comutils.h */; };
-		890EF1231793312A00C8F929 /* distributions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 890EF1161793312A00C8F929 /* distributions.cpp */; };
-		890EF1251793312A00C8F929 /* probutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 890EF1181793312A00C8F929 /* probutils.cpp */; };
-		8929E28B18C24F10005CA985 /* util.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8929E28A18C24F10005CA985 /* util.hpp */; };
-		8929E28D18C24F17005CA985 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8929E28C18C24F17005CA985 /* util.cpp */; };
+		8908686319622BA200462E97 /* cluster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8908685D19622BA200462E97 /* cluster.cpp */; };
+		8908686419622BA200462E97 /* distributions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8908685E19622BA200462E97 /* distributions.cpp */; };
+		8908686519622BA200462E97 /* testdata.h in Headers */ = {isa = PBXBuildFile; fileRef = 8908685F19622BA200462E97 /* testdata.h */; };
+		8908686619622BA200462E97 /* probutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8908686019622BA200462E97 /* probutils.cpp */; };
+		8908686719622BA200462E97 /* comutils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8908686119622BA200462E97 /* comutils.h */; };
+		8908686819622BA200462E97 /* comutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8908686219622BA200462E97 /* comutils.cpp */; };
+		8908686C19622BB300462E97 /* libcluster.h in Headers */ = {isa = PBXBuildFile; fileRef = 8908686919622BB300462E97 /* libcluster.h */; };
+		8908686D19622BB300462E97 /* distributions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8908686A19622BB300462E97 /* distributions.h */; };
+		8908686E19622BB300462E97 /* probutils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8908686B19622BB300462E97 /* probutils.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8908685D19622BA200462E97 /* cluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = cluster.cpp; path = src/cluster.cpp; sourceTree = SOURCE_ROOT; };
+		8908685E19622BA200462E97 /* distributions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = distributions.cpp; path = src/distributions.cpp; sourceTree = SOURCE_ROOT; };
+		8908685F19622BA200462E97 /* testdata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = testdata.h; path = src/testdata.h; sourceTree = SOURCE_ROOT; };
+		8908686019622BA200462E97 /* probutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = probutils.cpp; path = src/probutils.cpp; sourceTree = SOURCE_ROOT; };
+		8908686119622BA200462E97 /* comutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = comutils.h; path = src/comutils.h; sourceTree = SOURCE_ROOT; };
+		8908686219622BA200462E97 /* comutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = comutils.cpp; path = src/comutils.cpp; sourceTree = SOURCE_ROOT; };
+		8908686919622BB300462E97 /* libcluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libcluster.h; path = include/libcluster.h; sourceTree = SOURCE_ROOT; };
+		8908686A19622BB300462E97 /* distributions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = distributions.h; path = include/distributions.h; sourceTree = SOURCE_ROOT; };
+		8908686B19622BB300462E97 /* probutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = probutils.h; path = include/probutils.h; sourceTree = SOURCE_ROOT; };
 		890EF1071793311900C8F929 /* liblibcluster.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblibcluster.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		890EF10F1793312A00C8F929 /* distributions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = distributions.h; sourceTree = "<group>"; };
-		890EF1101793312A00C8F929 /* libcluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libcluster.h; sourceTree = "<group>"; };
-		890EF1111793312A00C8F929 /* probutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = probutils.h; sourceTree = "<group>"; };
-		890EF1131793312A00C8F929 /* cluster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cluster.cpp; sourceTree = "<group>"; };
-		890EF1141793312A00C8F929 /* comutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = comutils.cpp; sourceTree = "<group>"; };
-		890EF1151793312A00C8F929 /* comutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comutils.h; sourceTree = "<group>"; };
-		890EF1161793312A00C8F929 /* distributions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = distributions.cpp; sourceTree = "<group>"; };
-		890EF1181793312A00C8F929 /* probutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = probutils.cpp; sourceTree = "<group>"; };
-		8929E28A18C24F10005CA985 /* util.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = util.hpp; sourceTree = "<group>"; };
-		8929E28C18C24F17005CA985 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +62,9 @@
 		890EF10E1793312A00C8F929 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				8929E28A18C24F10005CA985 /* util.hpp */,
-				890EF10F1793312A00C8F929 /* distributions.h */,
-				890EF1101793312A00C8F929 /* libcluster.h */,
-				890EF1111793312A00C8F929 /* probutils.h */,
+				8908686919622BB300462E97 /* libcluster.h */,
+				8908686A19622BB300462E97 /* distributions.h */,
+				8908686B19622BB300462E97 /* probutils.h */,
 			);
 			name = include;
 			path = ../include;
@@ -76,12 +73,12 @@
 		890EF1121793312A00C8F929 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				8929E28C18C24F17005CA985 /* util.cpp */,
-				890EF1131793312A00C8F929 /* cluster.cpp */,
-				890EF1141793312A00C8F929 /* comutils.cpp */,
-				890EF1151793312A00C8F929 /* comutils.h */,
-				890EF1161793312A00C8F929 /* distributions.cpp */,
-				890EF1181793312A00C8F929 /* probutils.cpp */,
+				8908685D19622BA200462E97 /* cluster.cpp */,
+				8908685E19622BA200462E97 /* distributions.cpp */,
+				8908685F19622BA200462E97 /* testdata.h */,
+				8908686019622BA200462E97 /* probutils.cpp */,
+				8908686119622BA200462E97 /* comutils.h */,
+				8908686219622BA200462E97 /* comutils.cpp */,
 			);
 			name = src;
 			path = ../src;
@@ -94,11 +91,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890EF11D1793312A00C8F929 /* distributions.h in Headers */,
-				890EF11E1793312A00C8F929 /* libcluster.h in Headers */,
-				890EF11F1793312A00C8F929 /* probutils.h in Headers */,
-				8929E28B18C24F10005CA985 /* util.hpp in Headers */,
-				890EF1221793312A00C8F929 /* comutils.h in Headers */,
+				8908686D19622BB300462E97 /* distributions.h in Headers */,
+				8908686719622BA200462E97 /* comutils.h in Headers */,
+				8908686C19622BB300462E97 /* libcluster.h in Headers */,
+				8908686519622BA200462E97 /* testdata.h in Headers */,
+				8908686E19622BB300462E97 /* probutils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +125,7 @@
 		890EF0FE1793311900C8F929 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Mr. Magoo";
 			};
 			buildConfigurationList = 890EF1011793311900C8F929 /* Build configuration list for PBXProject "libcluster" */;
@@ -153,11 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890EF1201793312A00C8F929 /* cluster.cpp in Sources */,
-				890EF1211793312A00C8F929 /* comutils.cpp in Sources */,
-				890EF1231793312A00C8F929 /* distributions.cpp in Sources */,
-				8929E28D18C24F17005CA985 /* util.cpp in Sources */,
-				890EF1251793312A00C8F929 /* probutils.cpp in Sources */,
+				8908686319622BA200462E97 /* cluster.cpp in Sources */,
+				8908686819622BA200462E97 /* comutils.cpp in Sources */,
+				8908686419622BA200462E97 /* distributions.cpp in Sources */,
+				8908686619622BA200462E97 /* probutils.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +164,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -185,14 +180,14 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include/;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -201,7 +196,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -212,13 +206,14 @@
 				ENABLE_OPENMP_SUPPORT = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = /usr/local/include/;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -226,18 +221,28 @@
 		890EF10C1793311900C8F929 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				EXECUTABLE_PREFIX = lib;
-				GCC_VERSION = 4.9;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_VERSION = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
 		890EF10D1793311900C8F929 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				EXECUTABLE_PREFIX = lib;
-				GCC_VERSION = 4.9;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_VERSION = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
